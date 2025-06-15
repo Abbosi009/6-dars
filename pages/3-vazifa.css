@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh; /* to'liq ekran balandligi */
+  width: 100vw;  /* to'liq ekran kengligi */
+}
+
+.box {
+  flex: 1;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1 {
+  background-color: crimson;
+}
+
+.box2 {
+  background-color: orange;
+}
+
+/* 📱 Mobil: ustma-ust va 50% balandlikda */
+@media (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 100%;
+    height: 50%;
+  }
+}
