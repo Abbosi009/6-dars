@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: sans-serif;
+  color: black;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar main"
+    "content1 content2"
+    "content3 content3"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+.navbar    { grid-area: navbar; background: #aaffee; padding: 20px; }
+.sidebar   { grid-area: sidebar; background: #00f0ff; padding: 20px; }
+.main      { grid-area: main; background: #77f8ff; padding: 20px; }
+.content1  { grid-area: content1; background: #99f9cc; padding: 20px; }
+.content2  { grid-area: content2; background: #88ffbb; padding: 20px; }
+.content3  { grid-area: content3; background: #66ffaa; padding: 20px; }
+.footer    { grid-area: footer; background: #33ff99; padding: 20px; }
+
+/* ✅ Mobile uchun: 768px dan kichik */
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "navbar"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}
