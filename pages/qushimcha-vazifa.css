@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav article aside"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+header {
+  grid-area: header;
+  background: #ffcccc;
+  padding: 20px;
+}
+
+nav {
+  grid-area: nav;
+  background: #ffb347;
+  padding: 20px;
+}
+
+article {
+  grid-area: article;
+  background: #b3f3ff;
+  padding: 20px;
+}
+
+aside {
+  grid-area: aside;
+  background: #ffff99;
+  padding: 20px;
+}
+
+footer {
+  grid-area: footer;
+  background: #c1ffc1;
+  padding: 20px;
+}
+
+/* 📱 Mobile uchun: 768px dan kichik ekranlarda */
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-areas:
+      "header"
+      "nav"
+      "article"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}
